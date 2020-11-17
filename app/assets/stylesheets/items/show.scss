@@ -1,0 +1,12 @@
+.item-img {
+  height: 100%;
+  background-image: url("https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1598548505/627425_ZAD88_1000_001_100_0000_Light-Long-wool-silk-V-neck-dress.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.item-description {
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+}

@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "items/show";
+
+body {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+}
