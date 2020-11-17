@@ -1,1 +1,7 @@
-<h1>This is a new booking</h1>
+<h1>Its Almost Yours!</h1>
+
+<%= simple_form_for @booking do |f| %>
+  <%= f.input :username %>
+  <%= f.input :password %>
+  <%= f.button :submit %>
+<% end %>
