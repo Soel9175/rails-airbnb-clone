@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 2020_11_17_131003) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "start_date"
     t.bigint "item_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "start_date"
     t.datetime "end_date"
     t.index ["item_id"], name: "index_bookings_on_item_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_131003) do
     t.float "price"
     t.string "brand"
     t.string "initial_condition"
-    t.integer "num_uses", default: 0
+    t.integer "num_uses"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
