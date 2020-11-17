@@ -11,4 +11,6 @@ class Item < ApplicationRecord
   validates :num_uses, presence: true,
             numericality: {greater_than_or_equal_to: 0, only_integer: true}
   validates :available, inclusion: { in: [true, false] }
+
+  has_one_attached :photo
 end
