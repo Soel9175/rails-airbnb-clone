@@ -1,19 +1,35 @@
+<section>
+  <h3 class="mt-4"><%= @item.name %> by <%= @item.brand %></h3>
+  <div class="row h-75 mt-4">
+    <div class="col-7">
+      <div class="item-img"></div>
+    </div>
+    <div class="col-5">
+      <p>Brand: <%= @item.brand %></p>
+      <p>Price per day: £<%= @item.price %></p>
+      <p>Size: <%= @item.size %></p>
+      <p>Initial Condition: <%= @item.initial_condition %></p>
+      <p>Number of Uses: <%= @item.num_uses %></p>
+      <p>Available until: 23/12/20</p>
+      <a href="#" class="btn btn-warning">Add to cart</a>
+    </div>
+  </div>
+</section>
 
-<h3 class="mt-4"><%= @item.name %> by <%= @item.brand %></h3>
-<div class="row h-75 mt-4">
-  <div class="col-7">
-    <div class="item-img"></div>
-  </div>
-  <div class="col-5 pt-4">
-    <p>Brand: <%= @item.brand %></p>
-    <p>Price per day: £<%= @item.price %></p>
-    <p>Size: <%= @item.size %></p>
-    <p>Initial Condition: <%= @item.initial_condition %></p>
-    <p>Number of Uses: <%= @item.num_uses %></p>
-    <p>Available until: 23/12/20</p>
-    <a href="#" class="btn btn-warning">Add to cart</a>
-  </div>
-</div>
+<section class="mt-5">
+<h3>Details</h3>
+<hr>
+</section>
+
+<section>
+  <h3>Size and Fit</h3>
+  <hr>
+</section>
+
+<section>
+  <h3>Delivery and Returns</h3>
+  <hr>
+</section>
 
 <!-- <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="..." alt="Card image cap">
