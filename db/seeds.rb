@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require "open-uri"
 puts "Cleaning database..."
 Item.destroy_all
+Booking.destroy_all
 User.destroy_all
 
 
@@ -38,6 +39,8 @@ gucci_dress = Item.new(
 gucci_dress.save!
 puts "Gucci dress saved"
 
+
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 bond_tuxedo = Item.new(
   name: "James Bond's tuxedo",
   item_type: "Tuxedo",
@@ -49,8 +52,11 @@ bond_tuxedo = Item.new(
   initial_condition: "Bloodstains from fighting",
   user: User.all.sample
   )
-bond_tuxedo.save!
+
+bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+bond_tuxedo.save
 puts "Tuxedo saved"
+
 
 armani_suit = Item.new(
   name: "Classic Armani Suit",
