@@ -1,7 +1,7 @@
-<h1>Its Almost Yours!</h1>
+<h1 class="text-center mt-5">Its Almost Yours!</h1>
 
-<%= simple_form_for @booking do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.button :submit %>
+<%= simple_form_for [@item, @booking] do |f| %>
+  <%= f.input :start_date, as: :date, order: [:day, :month, :year], label: "I want it on..." %> 
+  <%= f.input :end_date, as: :date, order: [:day, :month, :year], label: "Until..."%>
+  <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
