@@ -5,8 +5,13 @@ class BookingsController < ApplicationController
   end
 
   def create 
-    @booking = Booking.create(strong_params)
-    redirect_to pages_thankyou_path
+    @booking = Booking.new(strong_params)
+    if @booking.valid?
+      @booking.save
+      redirect_to pages_thankyou_path
+    else
+      render :create
+    end
   end
 
   def strong_params
