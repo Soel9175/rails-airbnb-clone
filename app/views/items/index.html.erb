@@ -1,8 +1,12 @@
 <h1>List of clothing items here</h1>
 
+<div class="container">
+  <div class="row">
+
 <%= link_to "Rent An Item!", new_item_path, class: "btn btn-primary" %>
 
 <div class="item-grid">
+
     <% @items.each do |item| %>
       <div>
           <%= link_to item.name, item_path(item) %>
