@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :items do
     resources :bookings, only: [:create, :new, :show]
   end
+
+  get 'pages/thankyou', to: 'pages#thankyou'
 end

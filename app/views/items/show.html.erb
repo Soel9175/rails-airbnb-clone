@@ -11,7 +11,7 @@
       <p>Initial Condition: <%= @item.initial_condition %></p>
       <p>Number of Uses: <%= @item.num_uses %></p>
       <p>Available until: 23/12/20</p>
-      <a href="#" class="btn btn-warning">Add to cart</a>
+      <%= link_to "Add to cart", new_item_booking_path(@item_id), class: "btn btn-warning" %>
     </div>
   </div>
 </section>

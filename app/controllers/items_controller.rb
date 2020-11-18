@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1
   def show
-    item_id = params[:id]
+    @item_id = params[:id]
   end
 
   # GET /items/new

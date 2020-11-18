@@ -1,0 +1,9 @@
+<h1 class="text-center mt-5">Its Almost Yours!</h1>
+
+<div class="item-img mb-5" style="height:400px !important;"></div>
+
+<%= simple_form_for [@item, @booking] do |f| %>
+  <%= f.input :start_date, as: :date, order: [:day, :month, :year], label: "I want it from..." %> 
+  <%= f.input :end_date, as: :date, order: [:day, :month, :year], label: "Until..."%>
+  <%= f.button :submit, "Rent it now!", class: "btn btn-primary ml-1"%>
+<% end %>
