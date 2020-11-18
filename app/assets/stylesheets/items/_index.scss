@@ -3,3 +3,30 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
 }
+
+.item-index-description {
+  text-align: center;
+  color:white; 
+  font-size:24px; 
+  width: 100%;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+    }
+
+.item-index-description:hover {
+  text-decoration: none;
+}    
+  
+
+.item-index-description-text {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.3);
+  padding-top:8px;
+  width: 100%;
+}
