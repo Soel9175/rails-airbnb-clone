@@ -25,7 +25,7 @@ puts 'Finito!'
 
 puts 'Creating 6 new items...'
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw5D4GRQsCF4uMZOW2rH4Q-bU6XQLfNKDXbw&usqp=CAU')
+file = URI.open('https://d1v6u7haqkchb4.cloudfront.net/optimise/xlarge_SI6134__3_.webp?quality=100&signature=84c7e523bf38549a82b231c7773af0010dd8c5b156b3a7ea382b670eb59a3a31&src=https%3A%2F%2Fbec2df9eb90bb6604cfc-660d71a7a33bc04488a7427f5fddcedf.ssl.cf3.rackcdn.com%2Fuploads%2Fproduct_image%2Fphoto%2F5d52cf6766f89162a6e903cc%2Fxlarge_SI6134__3_.jpg&version=20200907')
 gucci_dress = Item.new(
   name: "Black Cocktail Dress",
   item_type: "Dress",
@@ -57,7 +57,7 @@ bond_tuxedo = Item.new(
 
 bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 bond_tuxedo.save
-puts "Tuxedo saved"
+puts "Tuxedo Pressed"
 
 file = URI.open('https://images.selfridges.com/is/image/selfridges/R03683450_BLACK_maxymM?$PDP_M_ZOOM$&defaultImage=R03683450_BLACK_M')
 armani_suit = Item.new(
@@ -73,7 +73,7 @@ armani_suit = Item.new(
   )
 armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 armani_suit.save!
-puts "Suit saved"
+puts "Suit Cleaned"
 
 file = URI.open('https://www.samuel-windsor.co.uk/images/products/zoom/z-BV2409.jpg')
 derby_shoes = Item.new(
@@ -89,7 +89,7 @@ derby_shoes = Item.new(
   )
 derby_shoes.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 derby_shoes.save!
-puts "Shoes saved"
+puts "Shoes Polished"
 
 file = URI.open('https://s.yimg.com/aah/movadobaby/rolex-submariner-116610-54.jpg')
 rolex_watch = Item.new(
@@ -105,7 +105,7 @@ rolex_watch = Item.new(
   )
 rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 rolex_watch.save!
-puts "Watch saved"
+puts "Watch Syncronised"
 
 file = URI.open('https://is4.revolveassets.com/images/p4/n/z/BENE-WD89_V1.jpg')
 floral_dress = Item.new(
@@ -121,6 +121,6 @@ floral_dress = Item.new(
   )
 floral_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 floral_dress.save!
-puts "Watch saved"
+puts "Flower Dress saved"
 
-puts "Items created successfully!"
+puts "Ready to go!"
