@@ -25,7 +25,7 @@ puts 'Finito!'
 
 puts 'Creating 6 new items...'
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw5D4GRQsCF4uMZOW2rH4Q-bU6XQLfNKDXbw&usqp=CAU')
 gucci_dress = Item.new(
   name: "Black Cocktail Dress",
   item_type: "Dress",
@@ -42,7 +42,7 @@ gucci_dress.save!
 puts "Gucci dress saved"
 
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://asset1.cxnmarksandspencer.com/is/image/mands/Black-Slim-Fit-Dinner-Jacket-1/SD_03_T15_8021D_Y0_X_EC_0?$PDP_IMAGEGRID_1_LG$')
 bond_tuxedo = Item.new(
   name: "James Bond's tuxedo",
   item_type: "Tuxedo",
@@ -59,7 +59,7 @@ bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 bond_tuxedo.save
 puts "Tuxedo saved"
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://images.selfridges.com/is/image/selfridges/R03683450_BLACK_maxymM?$PDP_M_ZOOM$&defaultImage=R03683450_BLACK_M')
 armani_suit = Item.new(
   name: "Classic Armani Suit",
   item_type: "Suit",
@@ -75,7 +75,7 @@ armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 armani_suit.save!
 puts "Suit saved"
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQKcqSAvZm42IkT1KX5MQTQ85VXy1BGKejv08vvbgj_DBof-6KOnY26slg8tFlRJSHvuSkDjW_xr7Iz_xVSnfyu9dfFObjAKiL4VhT8UK3NHP5EtIFj-gvJZA&usqp=CAc')
 derby_shoes = Item.new(
   name: "Derby Shoes",
   item_type: "Shoes",
@@ -91,7 +91,7 @@ derby_shoes.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 derby_shoes.save!
 puts "Shoes saved"
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://s.yimg.com/aah/movadobaby/rolex-submariner-116610-54.jpg')
 rolex_watch = Item.new(
   name: "Rolex Submariner Watch",
   item_type: "Watch",
@@ -107,7 +107,7 @@ rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 rolex_watch.save!
 puts "Watch saved"
 
-file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
+file = URI.open('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRCk3VBTm2yA3wotUZl06jYUcBCrQfAY8IWup_5ijsga_qZ_ZPXU0CHjWgEPOTykDH21FsGbVJ6OgA&usqp=CAc')
 floral_dress = Item.new(
   name: "Floral pattern dress",
   item_type: "Dress",
