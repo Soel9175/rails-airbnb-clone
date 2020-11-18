@@ -123,4 +123,4 @@ floral_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/pn
 floral_dress.save!
 puts "Flower Dress saved"
 
-puts "You're Ready to Go !"
+puts "The Database Is Looking FABULOUS 🌠⭐"
