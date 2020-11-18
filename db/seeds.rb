@@ -75,7 +75,7 @@ armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 armani_suit.save!
 puts "Suit saved"
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQKcqSAvZm42IkT1KX5MQTQ85VXy1BGKejv08vvbgj_DBof-6KOnY26slg8tFlRJSHvuSkDjW_xr7Iz_xVSnfyu9dfFObjAKiL4VhT8UK3NHP5EtIFj-gvJZA&usqp=CAc')
+file = URI.open('https://www.samuel-windsor.co.uk/images/products/zoom/z-BV2409.jpg')
 derby_shoes = Item.new(
   name: "Derby Shoes",
   item_type: "Shoes",
@@ -107,7 +107,7 @@ rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 rolex_watch.save!
 puts "Watch saved"
 
-file = URI.open('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRCk3VBTm2yA3wotUZl06jYUcBCrQfAY8IWup_5ijsga_qZ_ZPXU0CHjWgEPOTykDH21FsGbVJ6OgA&usqp=CAc')
+file = URI.open('https://is4.revolveassets.com/images/p4/n/z/BENE-WD89_V1.jpg')
 floral_dress = Item.new(
   name: "Floral pattern dress",
   item_type: "Dress",
