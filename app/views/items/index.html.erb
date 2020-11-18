@@ -5,7 +5,7 @@
   <hr>
   <div class="row" id="items">
     <% @items.each do |item| %>
-      <%= link_to item_path(item) do %>
+      <%= link_to item_path(item), class: "no-hover" do %>
         <div class="col-4">
           <div class="card-category item-index-description" style="background-image: url(<%= item.photo.attached? ? (cl_image_path item.photo.key) : (image_path("defaultdress.jpg")) %>), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
             <div class="item-index-description-text">
