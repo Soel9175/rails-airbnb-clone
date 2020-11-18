@@ -1,20 +1,20 @@
 <h1>List of clothing items here</h1>
 
 <div class="container">
-  <%= link_to "Rent An Item!", new_item_path, class: "btn btn-primary" %>
-</div>
-
-<div class="container">
   <div class="row">
+
+<%= link_to "Rent An Item!", new_item_path, class: "btn btn-primary" %>
+
+<div class="item-grid">
+
     <% @items.each do |item| %>
-      <div class="col-4">
-            <%= link_to item.name, item_path(item) %>
-            <%= link_to item.brand, item_path(item) %>
-            <%= link_to item.price, item_path(item) %>
-            <%= cl_image_tag item.photo.key %>
+      <div>
+          <%= link_to item.name, item_path(item) %>
+          <%= link_to item.brand, item_path(item) %>
+          <%= link_to item.price, item_path(item) %>
+          <%= cl_image_tag item.photo.key %>
       </div>
     <% end %>
-  </div>
 </div>
 
 
