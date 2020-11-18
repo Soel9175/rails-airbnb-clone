@@ -3,19 +3,17 @@
 <div class="container" id="items">
   <h1 class="text-center mt-4 pt-4">Find your Cinderella Moment</h1>
   <hr>
-  <div class="row" id="items">
+  <div class="item-grid">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
-        <div class="col-4">
           <div class="card-category item-card" style="background-image: url(<%= item.photo.attached? ? (cl_image_path item.photo.key) : (image_path("defaultdress.jpg")) %>), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
             <div class="item-description py-2">
               <h2><%= item.name %></h2>
                <p class="brand"><%= item.brand %></p>
                <div class="btn btn-danger"> Rent for £<%= item.price %></div>
             </div>
-        </div>
+          </div>
       <% end %>
-      </div>
     <% end %>
   </div>
 </div>
