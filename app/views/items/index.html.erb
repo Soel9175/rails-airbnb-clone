@@ -1,10 +1,8 @@
+<%= render partial: "shared/landing" %>
+
+
+
 <h1>List of clothing items here</h1>
-
-
-<div class="container">
-  <%= link_to "Rent An Item!", new_item_path, class: "btn btn-primary" %>
-</div>
-
 
 <div class="container">
   <div class="row" id="items">
@@ -21,7 +19,7 @@
             </div>
         </div>
       <% end %>
-      </div>     <%#= cl_image_tag item.photo.key %>
+      </div>     
     <% end %>
   </div>
 </div>
