@@ -7,16 +7,21 @@
 .item-card {
   color:white; 
   margin: 20px 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0, 0.3) !important;
 
   h2 {
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   p {
     font-size: 12px;
     font-style: italic;
     font-weight: lighter;
+    
+    .brand {
+      color:silver;
+    }
   }
 
   &:hover { 
@@ -30,6 +35,5 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0,0,0, 0.8);
-  padding-top:8px;
   width: 100%;
 }
