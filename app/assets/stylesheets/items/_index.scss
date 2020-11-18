@@ -1,8 +1,15 @@
 .item-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
   height: 80%;
+
+  @media (min-width: 0px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 720px) {
+  grid-template-columns: 1fr 1fr 1fr;
+  } 
 }
 
 .item-card {
@@ -15,6 +22,7 @@
   h2 {
     font-size: 28px;
     font-weight: 600;
+    text-align: center;
   }
 
   p {
