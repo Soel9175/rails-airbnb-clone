@@ -1,5 +1,6 @@
 class ChangeDaysToIntegerInBookings < ActiveRecord::Migration[6.0]
   def change
-    change_column :bookings, :days, :integer
+    remove_column :bookings, :days
+    add_column :bookings, :days, :integer
   end
 end
