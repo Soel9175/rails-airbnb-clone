@@ -44,7 +44,7 @@ puts "Gucci dress saved"
 
 file = URI.open('https://asset1.cxnmarksandspencer.com/is/image/mands/Black-Slim-Fit-Dinner-Jacket-1/SD_03_T15_8021D_Y0_X_EC_0?$PDP_IMAGEGRID_1_LG$')
 bond_tuxedo = Item.new(
-  name: "James Bond's tuxedo",
+  name: "James Bond's Tuxedo",
   item_type: "Tuxedo",
   size: "Large",
   gender: "Male",
@@ -109,7 +109,7 @@ puts "Watch saved"
 
 file = URI.open('https://is4.revolveassets.com/images/p4/n/z/BENE-WD89_V1.jpg')
 floral_dress = Item.new(
-  name: "Floral pattern dress",
+  name: "Floral Pattern Dress",
   item_type: "Dress",
   size: "12",
   gender: "Female",
