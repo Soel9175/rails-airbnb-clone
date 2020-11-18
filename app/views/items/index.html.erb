@@ -1,10 +1,8 @@
 <%= render partial: "shared/landing" %>
 
-
-
-<h1>List of clothing items here</h1>
-
-<div class="container">
+<div class="container" id="items">
+  <h1 class="text-center mt-4 pt-4">Find your Cinderella Moment</h1>
+  <hr>
   <div class="row" id="items">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
