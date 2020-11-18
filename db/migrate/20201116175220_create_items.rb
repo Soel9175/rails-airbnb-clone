@@ -9,7 +9,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :price
       t.string :brand
       t.string :initial_condition
-      t.integer :num_uses
+      t.integer :num_uses, default: 0
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
