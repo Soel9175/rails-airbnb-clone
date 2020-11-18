@@ -13,7 +13,9 @@
 @import "pages/index";
 
 @import "items/index";
-@import "items/show";
+@import "items/show"; 
+
+@import "bookings/new";
 
 html {
   scroll-behavior: smooth;
