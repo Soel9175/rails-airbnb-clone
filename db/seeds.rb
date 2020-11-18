@@ -25,6 +25,7 @@ puts 'Finito!'
 
 puts 'Creating 6 new items...'
 
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 gucci_dress = Item.new(
   name: "Black Cocktail Dress",
   item_type: "Dress",
@@ -36,6 +37,7 @@ gucci_dress = Item.new(
   initial_condition: "Tear in dress",
   user: User.all.sample
   )
+gucci_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 gucci_dress.save!
 puts "Gucci dress saved"
 
@@ -57,7 +59,7 @@ bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png
 bond_tuxedo.save
 puts "Tuxedo saved"
 
-
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 armani_suit = Item.new(
   name: "Classic Armani Suit",
   item_type: "Suit",
@@ -69,9 +71,11 @@ armani_suit = Item.new(
   initial_condition: "Good condition",
   user: User.all.sample
   )
+armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 armani_suit.save!
 puts "Suit saved"
 
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 derby_shoes = Item.new(
   name: "Derby Shoes",
   item_type: "Shoes",
@@ -83,9 +87,11 @@ derby_shoes = Item.new(
   initial_condition: "Pristine condition",
   user: User.all.sample
   )
+derby_shoes.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 derby_shoes.save!
 puts "Shoes saved"
 
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 rolex_watch = Item.new(
   name: "Rolex Submariner Watch",
   item_type: "Watch",
@@ -97,9 +103,11 @@ rolex_watch = Item.new(
   initial_condition: "Like new",
   user: User.all.sample
   )
+rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 rolex_watch.save!
 puts "Watch saved"
 
+file = URI.open('https://images.unsplash.com/photo-1601924381523-019b78541b95?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
 floral_dress = Item.new(
   name: "Floral pattern dress",
   item_type: "Dress",
@@ -111,4 +119,8 @@ floral_dress = Item.new(
   initial_condition: "Good",
   user: User.all.sample
   )
+floral_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+floral_dress.save!
+puts "Watch saved"
+
 puts "Items created successfully!"
