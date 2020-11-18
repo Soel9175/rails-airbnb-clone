@@ -3,7 +3,7 @@
     <h3 class="mt-4"><%= @item.name %> by <%= @item.brand %></h3>
     <div class="row h-75 mt-4">
       <div class="col-7">
-        <div class="item-img"></div>
+        <div class="item-img" style="background-image: url('<%= cl_image_path @item.photo.key %>');"></div>
       </div>
       <div class="col-5">
         <p>Brand: <%= @item.brand %></p>
