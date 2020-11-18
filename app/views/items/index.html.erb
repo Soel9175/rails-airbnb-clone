@@ -1,3 +1,7 @@
+<%= render partial: "shared/landing" %>
+
+
+
 <h1>List of clothing items here</h1>
 
 <div class="container">
@@ -5,7 +9,7 @@
 
 <%= link_to "Rent An Item!", new_item_path, class: "btn btn-primary" %>
 
-<div class="item-grid">
+<div class="item-grid" id="items">
 
     <% @items.each do |item| %>
       <div>
