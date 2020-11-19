@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   def account
     @bookings = current_user.bookings
     @items = current_user.items
-    raise
   end
 
 end
