@@ -3,6 +3,116 @@
 <div class="container" id="items">
   <h1 class="text-center mt-4 pt-4">Find your Cinderella Moment</h1>
   <hr>
+  <div class="d-flex justify-content-center" id="filters">
+      <div class="dropdown">
+        <div class="filter-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Type
+        </div>
+        <!-- Type Menu -->
+        <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="dresses">
+                Dresses
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="suits">
+                Suits
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="watches">
+                Watches
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="shoes">
+                Shoes
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Brand Menu -->
+      <div class="dropdown">
+        <div class="filter-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Brand
+        </div>
+        <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="armani">
+                Armani
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="gucci">
+                Gucci
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="dior">
+                Dior
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="rolex">
+                Rolex
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="zara">
+                Zara
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Size Dropdown -->
+      <div class="dropdown">
+        <div class="filter-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Size
+        </div>
+        <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="extra_small">
+                XS
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="small">
+                S
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="medium">
+                M
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="large">
+                L
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="extra_large">
+                XL
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
   <div class="item-grid">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
