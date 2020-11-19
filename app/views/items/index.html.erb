@@ -10,30 +10,19 @@
         </div>
         <!-- Type Menu -->
         <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="dresses">
-                Dresses
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="suits">
-                Suits
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="watches">
-                Watches
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="shoes">
-                Shoes
-            </label>
-          </div>
+          <% item_type_array = [] %>
+            <% @items.each do |item| %>
+              <% item_type_array << item.item_type %>
+            <% end %>
+            <% item_type_array = item_type_array.uniq %>
+            <% item_type_array.each do |i| %>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="item_type" value=<%= i %>>
+                  <%= i %>
+                </label>
+              </div>
+            <% end %>
         </div>
       </div>
       <!-- Brand Menu -->
@@ -42,36 +31,19 @@
           Brand
         </div>
         <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="armani">
-                Armani
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="gucci">
-                Gucci
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="dior">
-                Dior
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="rolex">
-                Rolex
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="zara">
-                Zara
-            </label>
-          </div>
+          <% item_brand_array = [] %>
+          <% @items.each do |item| %>
+            <% item_brand_array << item.brand %>
+          <% end %>
+          <% item_brand_array = item_brand_array.uniq %>
+          <% item_brand_array.each do |i| %>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="brand" value=<%= i %>>
+                <%= i %>
+              </label>
+            </div>
+          <% end %>
         </div>
       </div>
       <!-- Size Dropdown -->
@@ -80,36 +52,19 @@
           Size
         </div>
         <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="extra_small">
-                XS
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="small">
-                S
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="medium">
-                M
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="large">
-                L
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="extra_large">
-                XL
-            </label>
-          </div>
+          <% item_size_array = [] %>
+          <% @items.each do |item| %>
+            <% item_size_array << item.size %>
+          <% end %>
+          <% item_size_array = item_size_array.uniq %>
+          <% item_size_array.each do |i| %>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="size" value=<%= i %>>
+                <%= i %>
+              </label>
+            </div>
+          <% end %>
         </div>
       </div>
   </div>
@@ -127,6 +82,51 @@
     <% end %>
   </div>
 </div>
+
+
+<% item_type_array = [] %>
+<% @items.each do |item| %>
+  <% item_type_array << item.item_type %>
+  <% end %>
+<% item_type_array = item_type_array.uniq %>
+<% item_type_array.each do |i| %>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="item_type" value=<%= i %>>
+      <%= i %>
+    </label>
+  </div>
+<% end %>
+<br>
+<% item_brand_array = [] %>
+<% @items.each do |item| %>
+  <% item_brand_array << item.brand %>
+  <% end %>
+<% item_brand_array = item_brand_array.uniq %>
+<% item_brand_array.each do |i| %>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="brand" value=<%= i %>>
+      <%= i %>
+    </label>
+  </div>
+<% end %>
+
+<br>
+
+<% item_size_array = [] %>
+<% @items.each do |item| %>
+  <% item_size_array << item.size %>
+  <% end %>
+<% item_size_array = item_size_array.uniq %>
+<% item_size_array.each do |i| %>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="size" value=<%= i %>>
+      <%= i %>
+    </label>
+  </div>
+<% end %>
 
 
 <%= render partial: "footer" %>
