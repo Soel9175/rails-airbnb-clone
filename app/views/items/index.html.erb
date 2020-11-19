@@ -71,7 +71,7 @@
   <div class="item-grid">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
-          <div class="card-category item-card" style="background-image: url('<%= item.photo.attached? ? (cl_image_path item.photo.key) : (image_path("defaultdress.jpg")) %>'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+          <div class="card-category item-card" data-item_type="<%= item.item_type %>"  style="background-image: url('<%= item.photo.attached? ? (cl_image_path item.photo.key) : (image_path("defaultdress.jpg")) %>'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
             <div class="item-description py-2">
               <h2><%= item.name %></h2>
                <p class="brand"><%= item.brand.capitalize %></p>

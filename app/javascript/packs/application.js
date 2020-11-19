@@ -32,3 +32,40 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+checkboxes.forEach((box) => {
+  box.addEventListener('click', () => {
+    let onBoxes = [];
+    let keyValues = [];
+    // gather all "on" checkboxes
+    checkboxes.forEach((box) => {
+      if (box.checked) {
+        onBoxes.push(box);
+      };
+    });
+
+    // for each "on" box, put its "name" and "value" attributes into KeyValues array.
+    onBoxes.forEach((box) => {
+      if (keyValues[box.name]) {
+        keyValues[box.name].push(box.value);
+      } else {
+        keyValues[box.name] = [];
+        keyValues[box.name].push(box.value);
+      }
+    });
+    console.log(keyValues);
+    // We now want each card.
+    const cards = document.querySelectorAll(".card-category.item-card");
+
+    cards.forEach((card) => {
+      card.style.display = "block";
+      if (onBoxes.length > 0) {
+        if (card.dataset.item_type != keyValues["item_type"]) {
+          card.style.display = "none";
+        };
+      };
+    });
+  });
+});
