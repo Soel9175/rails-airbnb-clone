@@ -4,13 +4,14 @@
 
   /* set a height and width for the hero image */
   width: 100vw;
-  height: 91.5vh;
+  height: 100vh;
 
   /* positioning */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  bottom: 72px;
 }
 
 @keyframes FadeInOut {
@@ -33,7 +34,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   position: absolute;
   width: 100vw;
-  height: 91.5vh;
+  height: 100vh;
   transition: opacity 0.5s ease-in-out;
   animation-name: FadeInOut;
   animation-timing-function: ease-in-out;
