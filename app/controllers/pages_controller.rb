@@ -4,4 +4,11 @@ class PagesController < ApplicationController
 
   def thankyou
   end
+
+  def account
+    @bookings = current_user.bookings
+    @items = current_user.items
+    raise
+  end
+
 end

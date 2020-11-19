@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   get 'pages/thankyou', to: 'pages#thankyou'
+  get 'account', to: 'pages#account'
 end
