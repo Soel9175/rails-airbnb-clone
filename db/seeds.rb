@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 puts "Cleaning database..."
-Item.destroy_all
 Booking.destroy_all
+Item.all.each do |item|
+  item.photo.purge
+end
+Item.destroy_all
 User.destroy_all
 
 
