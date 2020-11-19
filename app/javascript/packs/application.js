@@ -62,9 +62,11 @@ checkboxes.forEach((box) => {
     cards.forEach((card) => {
       card.parentElement.style.display = "block";
       if (onBoxes.length > 0) {
-        if (!keyValues["item_type"].includes(card.dataset.item_type)) {
-          card.parentElement.style.display = "none";
-        };
+        Object.keys(keyValues).forEach((key) => {
+          if (!keyValues[key].includes(card.dataset[key])) {
+            card.parentElement.style.display = "none";
+          };
+        });
       };
     });
   });
