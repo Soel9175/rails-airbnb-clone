@@ -60,10 +60,10 @@ checkboxes.forEach((box) => {
     const cards = document.querySelectorAll(".card-category.item-card");
 
     cards.forEach((card) => {
-      card.style.display = "block";
+      card.parentElement.style.display = "block";
       if (onBoxes.length > 0) {
-        if (card.dataset.item_type != keyValues["item_type"]) {
-          card.style.display = "none";
+        if (!keyValues["item_type"].includes(card.dataset.item_type)) {
+          card.parentElement.style.display = "none";
         };
       };
     });
