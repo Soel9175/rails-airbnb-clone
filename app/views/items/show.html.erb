@@ -5,7 +5,8 @@
 
 
  <div class="card-product mt-4">
-<div class="item-img" style="background-image: url(<%= @item.photos.attached? ? (cl_image_path @item.photos[0].key) : (image_path("defaultdress.jpg")) %>), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+<% #raise %>
+   <div class="item-img" style="background-image: url(<%= @item.photo.attached? ? cl_image_path(@item.photo.key) : image_path("defaultdress.jpg") %>); background-size: cover; height: 650px;"></div>
   <div class="card-product-infos">
     <h2> <%= @item.name %> by <%= @item.brand %></h2>
     <p><%= @item.size %></p>
