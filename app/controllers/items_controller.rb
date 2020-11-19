@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   def show
     @item_id = params[:id]
+    @booking = Booking.new
   end
 
   # GET /items/new
@@ -25,8 +26,9 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = Item.new(item_params)
-
-    if @item.save
+    @item.available = true
+    @item.user = current_user
+     if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
     else
       render :new

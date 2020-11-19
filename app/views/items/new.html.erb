@@ -3,24 +3,47 @@
 
 <%#= render 'form', item: @item %>
 <div class="container">
-<h2>Want to list an item? Rent yours now!</h2>
+<h2>Want To List an Item? Rent Yours Now!</h2>
 <%= simple_form_for(@item) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :brand %>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.input :name %>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.input :brand %>
+      </div>
+    </div>
+    <div class="form-inputs">
+    <div class="form-row">
+      <div class="form-group col-md-6">
     <%= f.input :item_type %>
-    <%= f.input :size %>
-    <%= f.input :gender %>
-    <%= f.input :price %>
-    <%= f.input :initial_condition %>
-    <%= f.input :photo, as: :file %>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-outline-dark"  %>
+  <div class="form-group col-md-6">
+    <%= f.input :size %>
   </div>
 </div>
+
+  <div class="form-inputs">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.input :gender, as: :select, collection: ["Male", "Female"] %>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.input :initial_condition, as: :select, collection: ["New with tags", "Like new", "Contains defaults"] %>
+      </div>
+    </div>
+    <div class="form-group col-md-4 p-0">
+      <%= f.input :price %>
+      <%= f.input :photo, as: :file %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Create Item!", class: "btn btn-outline-dark"  %>
+    </div>
+  </div>
 <% end %>
+
 
