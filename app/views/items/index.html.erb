@@ -83,52 +83,6 @@
   </div>
 </div>
 
-
-<% item_type_array = [] %>
-<% @items.each do |item| %>
-  <% item_type_array << item.item_type %>
-  <% end %>
-<% item_type_array = item_type_array.uniq %>
-<% item_type_array.each do |i| %>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" name="item_type" value=<%= i %>>
-      <%= i %>
-    </label>
-  </div>
-<% end %>
-<br>
-<% item_brand_array = [] %>
-<% @items.each do |item| %>
-  <% item_brand_array << item.brand %>
-  <% end %>
-<% item_brand_array = item_brand_array.uniq %>
-<% item_brand_array.each do |i| %>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" name="brand" value=<%= i %>>
-      <%= i %>
-    </label>
-  </div>
-<% end %>
-
-<br>
-
-<% item_size_array = [] %>
-<% @items.each do |item| %>
-  <% item_size_array << item.size %>
-  <% end %>
-<% item_size_array = item_size_array.uniq %>
-<% item_size_array.each do |i| %>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" name="size" value=<%= i %>>
-      <%= i %>
-    </label>
-  </div>
-<% end %>
-
-
 <%= render partial: "footer" %>
 
 
