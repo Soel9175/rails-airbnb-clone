@@ -40,7 +40,7 @@ gucci_dress = Item.new(
   initial_condition: "Tear in dress",
   user: User.first
   )
-gucci_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+gucci_dress.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 gucci_dress.save!
 puts "Gucci dress saved"
 
@@ -58,7 +58,7 @@ bond_tuxedo = Item.new(
   user: User.first
   )
 
-bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+bond_tuxedo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 bond_tuxedo.save
 puts "Tuxedo Pressed"
 
@@ -74,7 +74,7 @@ armani_suit = Item.new(
   initial_condition: "Good condition",
   user: User.first
   )
-armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+armani_suit.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 armani_suit.save!
 puts "Suit Cleaned"
 
@@ -90,7 +90,7 @@ derby_shoes = Item.new(
   initial_condition: "Pristine condition",
   user: User.find(2)
   )
-derby_shoes.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+derby_shoes.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 derby_shoes.save!
 puts "Shoes Polished"
 
@@ -106,7 +106,7 @@ rolex_watch = Item.new(
   initial_condition: "Like new",
   user: User.find(2)
   )
-rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+rolex_watch.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 rolex_watch.save!
 puts "Watch Syncronised"
 
@@ -122,7 +122,7 @@ floral_dress = Item.new(
   initial_condition: "Good",
   user: User.find(2)
   )
-floral_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+floral_dress.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 floral_dress.save!
 puts "Flower Dress saved"
 
