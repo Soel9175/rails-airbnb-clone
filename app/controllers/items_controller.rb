@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   def show
     @item_id = params[:id]
+    @booking = Booking.new
   end
 
   # GET /items/new
