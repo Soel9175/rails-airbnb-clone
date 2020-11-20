@@ -26,6 +26,11 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = Item.new(item_params)
+    @item.brand = @item.brand.downcase
+    @item.item_type = @item.item_type.downcase
+    @item.size = @item.size.downcase
+    @item.gender = @item.gender.downcase
+    @item.initial_condition = @item.initial_condition.downcase
     @item.available = true
     @item.user = current_user
      if @item.save
