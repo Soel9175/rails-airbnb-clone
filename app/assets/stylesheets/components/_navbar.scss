@@ -38,9 +38,9 @@
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-
-
-
+  .dropdown-menu {
+    opacity: 0.1;
+  }
 }
 
 .dropdown-divider {
