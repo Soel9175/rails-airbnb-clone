@@ -4,13 +4,14 @@
 
   /* set a height and width for the hero image */
   width: 100vw;
-  height: 91.5vh;
+  height: 100vh;
 
   /* positioning */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  bottom: 72px;
 }
 
 @keyframes FadeInOut {
@@ -33,7 +34,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   position: absolute;
   width: 100vw;
-  height: 91.5vh;
+  height: 100vh;
   transition: opacity 0.5s ease-in-out;
   animation-name: FadeInOut;
   animation-timing-function: ease-in-out;
@@ -64,7 +65,7 @@ animation-delay: 0
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #E0E1E1;
 }
 
 
@@ -85,6 +86,6 @@ animation-delay: 0
   border-color: #FFFFFF;
   background-color: #000000;
   letter-spacing: 0.05em;
-  color: white;
+  color: #E0E1E1;
   text-decoration: none;
 }
