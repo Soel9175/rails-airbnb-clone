@@ -26,7 +26,11 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = Item.new(item_params)
+    @item.brand = @item.brand.downcase
+    @item.size = @item.size.downcase
+    @item.gender = @item.gender.downcase
     @item.available = true
+    raise
     @item.user = current_user
      if @item.save
       redirect_to @item, notice: 'Item was successfully created.'
