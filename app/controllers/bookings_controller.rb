@@ -8,8 +8,6 @@ class BookingsController < ApplicationController
     if @booking.valid?
       @booking.save
       redirect_to pages_account
-    else
-      render :new
     end
   end
 
