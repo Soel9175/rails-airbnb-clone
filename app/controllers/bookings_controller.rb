@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
     if @booking.valid?
       @booking.save
-      redirect_to pages_account
+      redirect_to pages_account_path
     end
   end
 
