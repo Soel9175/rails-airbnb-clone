@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
     if @booking.valid?
       @booking.save
-      redirect_to pages_thankyou_path
+      redirect_to pages_account
     else
       render :new
     end

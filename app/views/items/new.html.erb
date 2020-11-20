@@ -41,7 +41,8 @@
       <%= f.input :photo, as: :file %>
     </div>
     <div class="form-actions">
-      <%= f.button :submit, "Create Item!", class: "btn btn-outline-dark"  %>
+      <%= f.button :submit, "Real Submit Button!", class: "btn btn-outline-dark", id: "RealItemSubmitButton", style: "display: none;" %>
+      <a id="FakeItemSubmitButton" class="btn btn-outline-dark">Create Item!</a>
     </div>
   </div>
 <% end %>

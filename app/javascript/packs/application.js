@@ -24,7 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
+import { initSwal } from "../plugins/sweetalert";
 
 // Internal imports, e.g:
 import {smoothScroll} from '../components/banner'
@@ -36,6 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   smoothScroll();
   navChange();
+  initSwal();
 });
 
 const checkboxes = document.querySelectorAll("input[type='checkbox']");

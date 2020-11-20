@@ -11,7 +11,7 @@
     <h2> <%= @item.name %> by <%= @item.brand %></h2>
     <p><%= @item.size %></p>
     <p><%= @item.initial_condition %></p>
-    <p><%= @item.num_uses %></p>
+    <p>Number of uses : <%= @item.num_uses %></p>
     <br>
 
     <%= simple_form_for [@item, @booking], method: :post do |f| %>
@@ -24,7 +24,8 @@
     </div>
   </div>
    <br>
-   <%= f.button :submit, "Book item", class: "btn btn-dark" %>
+    <%= f.button :submit, "Book item", class: "btn btn-dark", id: "RealBookingSubmitButton", style: "display: none;" %>
+    <a id="FakeBookingSubmitButton" class="btn btn-dark">Book item</a>
     <% end %>
     <p style="padding-left: 520px;font-size: 25px;"> <strong>£<%= @item.price %></strong></p>
 
