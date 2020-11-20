@@ -1,6 +1,5 @@
 class Item < ApplicationRecord
   belongs_to :user
-  has_many :bookings
   validates :name, presence: true
   validates :size, presence: true
   validates :gender, presence: true
@@ -13,5 +12,5 @@ class Item < ApplicationRecord
             numericality: {greater_than_or_equal_to: 0, only_integer: true}
   validates :available, inclusion: { in: [true, false] }
 
-  has_many_attached :photos
+  has_one_attached :photo
 end
