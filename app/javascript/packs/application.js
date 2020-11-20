@@ -27,11 +27,13 @@ import "bootstrap";
 import "../plugins/flatpickr"
 
 // Internal imports, e.g:
+import {smoothScroll} from '../components/banner'
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  smoothScroll();
 });
 
 const checkboxes = document.querySelectorAll("input[type='checkbox']");
