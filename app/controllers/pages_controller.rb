@@ -9,5 +9,4 @@ class PagesController < ApplicationController
     @bookings = current_user.bookings
     @items = current_user.items
   end
-
 end
