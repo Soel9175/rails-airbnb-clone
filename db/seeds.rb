@@ -17,9 +17,9 @@ User.destroy_all
 
 
 puts 'Creating 5 new users...'
-5.times do |i|
+5.times do
   user = User.new(
-    email: "email#{i}@gmail.com",
+    email: Faker::Internet.email,
     password: "password"
     )
   user.save!
@@ -38,9 +38,9 @@ gucci_dress = Item.new(
   price: 15.99,
   brand: "Gucci",
   initial_condition: "Tear in dress",
-  user: User.first
+  user: User.all.sample
   )
-gucci_dress.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+gucci_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 gucci_dress.save!
 puts "Gucci dress saved"
 
@@ -55,10 +55,10 @@ bond_tuxedo = Item.new(
   price: 25.45,
   brand: "Armani",
   initial_condition: "Bloodstains from fighting",
-  user: User.first
+  user: User.all.sample
   )
 
-bond_tuxedo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+bond_tuxedo.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 bond_tuxedo.save
 puts "Tuxedo Pressed"
 
@@ -72,9 +72,9 @@ armani_suit = Item.new(
   price: 10.33,
   brand: "Armani",
   initial_condition: "Good condition",
-  user: User.first
+  user: User.all.sample
   )
-armani_suit.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+armani_suit.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 armani_suit.save!
 puts "Suit Cleaned"
 
@@ -88,9 +88,9 @@ derby_shoes = Item.new(
   price: 30.22,
   brand: "Dior",
   initial_condition: "Pristine condition",
-  user: User.find(2)
+  user: User.all.sample
   )
-derby_shoes.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+derby_shoes.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 derby_shoes.save!
 puts "Shoes Polished"
 
@@ -104,9 +104,9 @@ rolex_watch = Item.new(
   price: 60.44,
   brand: "Rolex",
   initial_condition: "Like new",
-  user: User.find(2)
+  user: User.all.sample
   )
-rolex_watch.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+rolex_watch.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 rolex_watch.save!
 puts "Watch Syncronised"
 
@@ -120,9 +120,9 @@ floral_dress = Item.new(
   price: 20.32,
   brand: "Zara",
   initial_condition: "Good",
-  user: User.find(2)
+  user: User.all.sample
   )
-floral_dress.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+floral_dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 floral_dress.save!
 puts "Flower Dress saved"
 

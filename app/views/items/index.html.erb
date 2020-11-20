@@ -4,6 +4,28 @@
   <h1 class="text-center mt-4 pt-4">Find your Cinderella Moment</h1>
   <hr>
   <div class="d-flex justify-content-center" id="filters">
+      <!-- Gender menu -->
+      <div class="dropdown">
+        <div class="filter-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gender
+        </div>
+        <!-- Type Menu -->
+        <div class="dropdown-menu pl-3 pb-0" aria-labelledby="dropdownMenuButton">
+          <% item_gender_array = [] %>
+            <% @items.each do |item| %>
+              <% item_gender_array << item.gender %>
+            <% end %>
+            <% item_gender_array = item_gender_array.uniq %>
+            <% item_gender_array.each do |i| %>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="gender" value="<%= i %>">
+                  <%= i.capitalize %>
+                </label>
+              </div>
+            <% end %>
+        </div>
+      </div>
       <div class="dropdown">
         <div class="filter-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Type
@@ -18,8 +40,8 @@
             <% item_type_array.each do |i| %>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" name="item_type" value=<%= i %>>
-                  <%= i %>
+                  <input type="checkbox" name="item_type" value="<%= i %>">
+                  <%= i.capitalize %>
                 </label>
               </div>
             <% end %>
@@ -39,8 +61,8 @@
           <% item_brand_array.each do |i| %>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="brand" value=<%= i %>>
-                <%= i %>
+                <input type="checkbox" name="brand" value="<%= i %>">
+                <%= i.capitalize %>
               </label>
             </div>
           <% end %>
@@ -71,10 +93,10 @@
   <div class="item-grid">
     <% @items.each do |item| %>
       <%= link_to item_path(item) do %>
-          <div class="card-category item-card" style="background-image: url('<%= item.photos.attached? ? (cl_image_path item.photos[0].key) : (image_path("defaultdress.jpg")) %>'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+          <div class="card-category item-card" data-gender="<%= item.gender %>" data-item_type="<%= item.item_type %>" data-brand ="<%= item.brand %>" data-size="<%= item.size %>" style="background-image: url('<%= item.photo.attached? ? (cl_image_path item.photo.key) : (image_path("defaultdress.jpg")) %>'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
             <div class="item-description py-2">
               <h2><%= item.name %></h2>
-               <p class="brand"><%= item.brand %></p>
+               <p class="brand"><%= item.brand.capitalize %></p>
             </div>
           </div>
       <% end %>
