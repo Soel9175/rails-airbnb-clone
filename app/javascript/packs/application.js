@@ -30,6 +30,8 @@ import { initSwal } from "../plugins/sweetalert";
 // Internal imports, e.g:
 import {smoothScroll} from '../components/banner'
 import {navChange} from '../components/banner'
+import {initFlatpicker} from "../plugins/flatpickr"
+
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
@@ -37,6 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   smoothScroll();
   navChange();
+  initFlatpicker();
   initSwal();
 });
 
