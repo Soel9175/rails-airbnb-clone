@@ -24,7 +24,8 @@
     </div>
   </div>
    <br>
-   <%= f.button :submit, "Book item", class: "btn btn-dark" %>
+    <%= f.button :submit, "Book item", class: "btn btn-dark", id: "RealBookingSubmitButton", style: "display: none;" %>
+    <a id="FakeBookingSubmitButton" class="btn btn-dark">Book item</a>
     <% end %>
     <p style="padding-left: 520px;font-size: 25px;"> <strong>£<%= @item.price %></strong></p>
 
