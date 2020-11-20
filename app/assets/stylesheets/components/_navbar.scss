@@ -1,5 +1,4 @@
 .navbar-lewagon {
-  background-color: purple;
   justify-content: space-between;
   background: transparent;
   z-index: 2;
@@ -16,15 +15,36 @@
 .navbar-light .navbar-nav .nav-link {
   // font-family: $body-font;
   font-family: $headers-font;
-  color: #E0E1E1;
+  color: black;
   font-weight: 300;
   border-left: 1px solid #C58916;
   transition: all 0.5s linear;
+  padding-right: 10px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #D9DDDC;
+  color: black;
   letter-spacing: 1px;
   font-weight: 700;
   border-left: 2px solid #DAA400;
 }
+
+/* Styling the placeholder downdown menu */
+.dropdown-menu {
+  font-family: $headers-font;
+  font-color: #E0E1E1;
+  background-color: #E0E1E1;
+  border: 1px solid #DAA400;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  .dropdown-menu {
+    opacity: 0.1;
+  }
+}
+
+.dropdown-divider {
+  border-top: 1px solid #5E5F62;
+  opacity: 0.1;
+}
+
