@@ -3,10 +3,11 @@
 
 <div class="container">
   <section>
-<h1>My Rented Items</h1>
+    <h1 class="text-center mt-4 pt-4">My Rented Items</h1>
 <% @items.each do |item| %>
  <div class="card-product mt-4">
-<div class="card-category item-card" style="background-image: url(<%= item.photos.attached? ? (cl_image_path item.photos[0].key) : (image_path("defaultdress.jpg")) %>), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+<!-- <div class="card-category item-card item-img" style="background-image: url(<%#= item.photos.attached? ? (cl_image_path item.photos[0].key) : (image_path("defaultdress.jpg")) %>), width: 200px; background-position: center; background-size: cover;"></div> -->
+  <div class="item-img" style="background-image: url(<%= item.photos.attached? ? (cl_image_path item.photos[0].key) : (image_path("defaultdress.jpg")) %>); background-size: cover; background-position: center; linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"></div>
   <div class="card-product-infos">
     <h2> <%= item.name %> by <%= item.brand %></h2>
     <p><%= item.size %></p>
@@ -26,11 +27,15 @@
 </div>
 <% end %>
 </section>
-<h1>My Bookings</h1>
+
+<div class="container">
+</section>
+<h1 class="text-center mt-4 pt-4">My Bookings</h1>
 <section>
   <% @bookings.each do |booking| %>
  <div class="card-product mt-4">
-<div class="card-category item-card" style="background-image: url(<%= booking.item.photos.attached? ? (cl_image_path booking.item.photos[0].key) : (image_path("defaultdress.jpg")) %>), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+<!-- <div class="card-category item-card item-img" style="background-image: url(<%#= booking.item.photos.attached? ? (cl_image_path booking.item.photos[0].key) : (image_path("defaultdress.jpg")) %>), width: 200px; linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"></div> -->
+  <div class="item-img" style="background-image: url(<%= booking.item.photos.attached? ? (cl_image_path booking.item.photos[0].key) : (image_path("defaultdress.jpg")) %>); background-size: cover; background-position: center; linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"></div>
   <div class="card-product-infos">
     <h2> <%= booking.item.name %> by <%= booking.item.brand %></h2>
     <p><%= booking.item.size %></p>
@@ -41,10 +46,13 @@
     <p style="padding-left: 520px;font-size: 25px;"> <strong>£<%= booking.item.price %></strong></p>
 
   </div>
-</div>
+<!-- </div> -->
+<!-- </div> -->
 </div>
 <% end %>
 </section>
+</div>
+
 
 
 </div>
