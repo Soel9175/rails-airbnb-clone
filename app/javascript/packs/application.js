@@ -28,11 +28,15 @@ import "../plugins/flatpickr";
 import { initSwal } from "../plugins/sweetalert";
 
 // Internal imports, e.g:
+import {smoothScroll} from '../components/banner'
+import {navChange} from '../components/banner'
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  smoothScroll();
+  navChange();
   initSwal();
 });
 
